@@ -1,30 +1,30 @@
 #include <stdio.h>
 
-// 1. **Calculate the area of a square** given the length of its side.
-// 2. **Calculate the volume of a cube** given the length of its side.
+//1. Debes declarar una función llamada `is_even`.
+//2. La función `is_even` debe devolver un valor de tipo `int`.
+//3. La función `is_even` debe recibir **un parámetro de tipo `int`**.
+//4. La función `is_even` debe devolver: `1` si el número recibido es par, `0` si el número recibido **no** es par
 
-float c_area(float side) {
-    float ar = side * side;
-    return ar;
-}
-
-float c_volume(float side) {
-    float vol = side * side * side;
-    return vol;
+int is_even(int number) {
+    if (number %2 == 0) {
+        return 1;
+    }
+    return 0;
 }
 
 int main() {
 
-    float side, area, volume; 
+    int number;
     
-    printf("Enter the side lenght: ");
-    scanf("%f", &side);
+    printf("Ingrese un numero: ");
+    scanf("%i", &number);
 
-    area = c_area(side);
-    volume = c_volume(side);
-
-    printf("Square area: %.2f\n", area);
-    printf("Cube volume: %.2f\n", volume);
+    if (is_even(number)) {
+        printf("El numero es par");
+    }
+    else {
+        printf("El numero es impar");
+    }
 
     return 0;
 }
